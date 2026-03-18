@@ -1,0 +1,12 @@
+<svg width="140" height="40" viewBox="0 0 140 40" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Uniswap v4">
+  <defs>
+    <linearGradient id="u4grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff1a6c"/>
+      <stop offset="100%" stop-color="#ff7a18"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="138" height="38" rx="10" fill="#111827" stroke="#334155"/>
+  <path d="M20 27c4-8 8-10 12-11-1 2-3 4-3 7 3-2 6-2 9-1-2 2-5 4-8 5-4 1-7 1-10 0z" fill="url(#u4grad)"/>
+  <circle cx="31" cy="13" r="2" fill="#ffe4ef"/>
+  <text x="45" y="24" font-family="Verdana, Geneva, sans-serif" font-size="13" fill="#f8fafc">Uniswap v4</text>
+</svg>
