@@ -1,0 +1,30 @@
+# Compiler files
+cache/
+out/
+contracts/cache/
+contracts/out/
+reactive/cache/
+reactive/out/
+
+# Ignores development broadcast logs
+/broadcast/
+contracts/broadcast/
+reactive/broadcast/
+
+# Dotenv file
+.env
+
+# Node modules
+node_modules/
+frontend/node_modules/
+frontend/dist/
+*.tsbuildinfo
+
+# Workspace deps
+deps/
+
+# Requested untracked directories at repository root
+/lib/
+/frontend/
+/src/
+/context/
