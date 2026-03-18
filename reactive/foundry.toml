@@ -1,0 +1,15 @@
+[profile.default]
+bytecode_hash = "none"
+evm_version = "cancun"
+ffi = true
+libs = ["../deps", "lib"]
+no_match_coverage = "script|test"
+out = "out"
+script = "script"
+solc_version = "0.8.30"
+src = "src"
+test = "test"
+via_ir = false
+
+[fmt]
+line_length = 120
