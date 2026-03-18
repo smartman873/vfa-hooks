@@ -1,0 +1,540 @@
+[
+  {
+    "type": "constructor",
+    "inputs": [
+      {
+        "name": "_originChainId",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "_destinationChainId",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "_originHook",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "_originMarket",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "_settlementExecutor",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "_callbackGasLimit",
+        "type": "uint64",
+        "internalType": "uint64"
+      },
+      {
+        "name": "_modelParams",
+        "type": "tuple",
+        "internalType": "struct ReactiveVolatilityMath.Params",
+        "components": [
+          {
+            "name": "volumeScale",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "spikeScale",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "maxVolumeBoost",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "maxSpikeBoost",
+            "type": "uint256",
+            "internalType": "uint256"
+          }
+        ]
+      }
+    ],
+    "stateMutability": "payable"
+  },
+  {
+    "type": "receive",
+    "stateMutability": "payable"
+  },
+  {
+    "type": "function",
+    "name": "callbackGasLimit",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint64",
+        "internalType": "uint64"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "coverDebt",
+    "inputs": [],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "destinationChainId",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "initializeSubscriptions",
+    "inputs": [],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "latestTelemetry",
+    "inputs": [
+      {
+        "name": "",
+        "type": "bytes32",
+        "internalType": "bytes32"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "cumulativeAbsTickDelta",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "cumulativeSquaredTickDelta",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "cumulativeVolume",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "swapCount",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "volumeSpikeScore",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "lastTimestamp",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "lastBlockNumber",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "modelParams",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "volumeScale",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "spikeScale",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "maxVolumeBoost",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "maxSpikeBoost",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "originChainId",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "originHook",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "originMarket",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "owner",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "pay",
+    "inputs": [
+      {
+        "name": "amount",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "react",
+    "inputs": [
+      {
+        "name": "log",
+        "type": "tuple",
+        "internalType": "struct IReactive.LogRecord",
+        "components": [
+          {
+            "name": "chain_id",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "_contract",
+            "type": "address",
+            "internalType": "address"
+          },
+          {
+            "name": "topic_0",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "topic_1",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "topic_2",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "topic_3",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "data",
+            "type": "bytes",
+            "internalType": "bytes"
+          },
+          {
+            "name": "block_number",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "op_code",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "block_hash",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "tx_hash",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "log_index",
+            "type": "uint256",
+            "internalType": "uint256"
+          }
+        ]
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "settlementExecutor",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "subscriptionsInitialized",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool",
+        "internalType": "bool"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "trackedEpochs",
+    "inputs": [
+      {
+        "name": "",
+        "type": "bytes32",
+        "internalType": "bytes32"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "epochId",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "endTime",
+        "type": "uint64",
+        "internalType": "uint64"
+      },
+      {
+        "name": "settlementPrice",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "startAbsTickDelta",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "startSquaredTickDelta",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "startVolume",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "startSwapCount",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "startSpikeScore",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "active",
+        "type": "bool",
+        "internalType": "bool"
+      },
+      {
+        "name": "callbackSent",
+        "type": "bool",
+        "internalType": "bool"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "event",
+    "name": "Callback",
+    "inputs": [
+      {
+        "name": "chain_id",
+        "type": "uint256",
+        "indexed": true,
+        "internalType": "uint256"
+      },
+      {
+        "name": "_contract",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      },
+      {
+        "name": "gas_limit",
+        "type": "uint64",
+        "indexed": true,
+        "internalType": "uint64"
+      },
+      {
+        "name": "payload",
+        "type": "bytes",
+        "indexed": false,
+        "internalType": "bytes"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "EpochSettlementCallbackPrepared",
+    "inputs": [
+      {
+        "name": "poolId",
+        "type": "bytes32",
+        "indexed": true,
+        "internalType": "bytes32"
+      },
+      {
+        "name": "epochId",
+        "type": "uint256",
+        "indexed": true,
+        "internalType": "uint256"
+      },
+      {
+        "name": "realizedVolatility",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      },
+      {
+        "name": "settlementPrice",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      },
+      {
+        "name": "replayKey",
+        "type": "bytes32",
+        "indexed": false,
+        "internalType": "bytes32"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "EpochTrackingUpdated",
+    "inputs": [
+      {
+        "name": "poolId",
+        "type": "bytes32",
+        "indexed": true,
+        "internalType": "bytes32"
+      },
+      {
+        "name": "epochId",
+        "type": "uint256",
+        "indexed": true,
+        "internalType": "uint256"
+      },
+      {
+        "name": "endTime",
+        "type": "uint64",
+        "indexed": false,
+        "internalType": "uint64"
+      },
+      {
+        "name": "settlementPrice",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "SubscriptionsInitialized",
+    "inputs": [
+      {
+        "name": "originChainId",
+        "type": "uint256",
+        "indexed": true,
+        "internalType": "uint256"
+      },
+      {
+        "name": "originHook",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      },
+      {
+        "name": "originMarket",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      }
+    ],
+    "anonymous": false
+  }
+]
