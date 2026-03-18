@@ -1,0 +1,10 @@
+forge-std/=lib/deps/forge-std/src/
+@uniswap/v4-core/=lib/deps/v4-core/
+@uniswap/v4-periphery/=lib/deps/v4-periphery/
+v4-core/=lib/deps/v4-core/
+v4-periphery/=lib/deps/v4-periphery/
+permit2/=lib/deps/permit2/
+solmate/=lib/deps/solmate/
+hookmate/=lib/deps/hookmate/src/
+@openzeppelin/contracts/=lib/deps/openzeppelin-contracts/contracts/
+openzeppelin-contracts/=lib/deps/openzeppelin-contracts/
